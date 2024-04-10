@@ -1,12 +1,16 @@
-allow_embedding: false
-package_name: blank_anvil
-name: blank-anvil
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+- source: /runtime/services/anvil/email.yml
+  client_config: {}
+  server_config: {test_mode: true}
+package_name: Form_Submit
+allow_embedding: false
+name: Form Submit
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {title: Feedback Form}
+startup_form: Form1
+renamed: true
